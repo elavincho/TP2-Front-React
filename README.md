@@ -1,3 +1,7 @@
+<img src="https://i.ibb.co/VYkx7wHV/ifts29-Logo.png" width="80" height="80" alt="ifts-29"/>
+
+# Desarrollo de Sistemas Web - Front End
+
 <h1 align="center">404 Solutions - Aplicación React con Dashboard </h1>
 
 <p align="center">

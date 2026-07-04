@@ -14,7 +14,6 @@
 
 **Sitio Web:** [https://404-solutions-fe.vercel.app/](https://404-solutions-fe.vercel.app/)
 
-**GitHub:** [github.com/raquerh/404Solutions_FE](https://github.com/raquerh/404Solutions_FE)
 
 ---
 

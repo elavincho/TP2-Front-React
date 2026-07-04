@@ -1,0 +1,407 @@
+/* ===== SIDEBAR DASHBOARD ===== */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-right: 2px solid var(--terminal-green);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Scrollbar personalizado */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--terminal-green);
+  border-radius: 3px;
+}
+
+/* ===== HEADER ===== */
+.sidebar-header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--terminal-green);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.sidebar-logo:hover {
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.3));
+}
+
+.logo-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar.collapsed .logo-text {
+  display: none;
+}
+
+.sidebar-toggle {
+  background: transparent;
+  border: 1px solid var(--terminal-green);
+  color: var(--terminal-green);
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sidebar-toggle:hover {
+  background: var(--terminal-green);
+  color: #0a0a0a;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* ===== NAVEGACIÓN ===== */
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.nav-section {
+  margin-bottom: 2rem;
+}
+
+.nav-section-title {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: rgba(0, 255, 0, 0.7);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.sidebar.collapsed .nav-section-title {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.sidebar.collapsed .nav-section-title span {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.nav-item:hover {
+  background: rgba(0, 255, 0, 0.1);
+  color: var(--terminal-green);
+  border-left-color: var(--terminal-green);
+}
+
+.nav-item.active {
+  background: rgba(0, 255, 0, 0.15);
+  color: var(--terminal-green);
+  border-left-color: var(--terminal-green);
+  font-weight: bold;
+}
+
+.nav-item.active::before {
+  content: '▶';
+  position: absolute;
+  right: 1rem;
+  animation: blink 1.5s infinite;
+}
+
+.sidebar.collapsed .nav-item.active::before {
+  display: none;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.nav-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar.collapsed .nav-label {
+  display: none;
+}
+
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 0.875rem 0.5rem;
+}
+
+/* ===== EQUIPO ===== */
+.team-item {
+  gap: 0.75rem;
+}
+
+.team-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 255, 0, 0.3);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.team-item:hover .team-avatar {
+  border-color: var(--terminal-green);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.team-item.active .team-avatar {
+  border-color: var(--terminal-green);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+/* ===== FOOTER ===== */
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.terminal-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.sidebar.collapsed .terminal-indicator {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot.red {
+  background: #ff5555;
+  box-shadow: 0 0 5px #ff5555;
+}
+
+.dot.yellow {
+  background: #ffff55;
+  box-shadow: 0 0 5px #ffff55;
+}
+
+.dot.green {
+  background: #00ff00;
+  box-shadow: 0 0 5px #00ff00;
+  animation: pulse 2s infinite;
+}
+
+.status-text {
+  color: var(--terminal-green);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sidebar.collapsed .status-text {
+  display: none;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.3; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+}
+
+/* ===== DESKTOP / MOBILE SPLIT ===== */
+
+/* En desktop: solo se muestra el sidebar fijo */
+.desktop-sidebar {
+  display: flex;
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  /* Ocultar sidebar fijo de desktop */
+  .desktop-sidebar {
+    display: none;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1100;
+    width: 40px;
+    height: 40px;
+    background: #0a0a0a;
+    border: 2px solid var(--terminal-green);
+    color: var(--terminal-green);
+    font-size: 1.3rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .hamburger-btn:hover {
+    background: var(--terminal-green);
+    color: #0a0a0a;
+  }
+
+  /* Drawer mobile: oculto por defecto fuera de pantalla */
+  .mobile-drawer {
+    display: flex;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-drawer.open {
+    transform: translateX(0);
+  }
+
+  /* Backdrop oscuro al abrir el drawer */
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+  }
+
+  /* En el drawer siempre se muestran labels */
+  .mobile-drawer .nav-label,
+  .mobile-drawer .logo-text,
+  .mobile-drawer .status-text {
+    display: block;
+  }
+
+  .mobile-drawer .nav-section-title span {
+    display: inline;
+  }
+
+  .mobile-drawer .nav-item {
+    justify-content: flex-start;
+    padding: 0.875rem 1rem;
+  }
+
+  .mobile-drawer .nav-item.active::before {
+    display: block;
+  }
+
+  .mobile-drawer .terminal-indicator {
+    flex-direction: row;
+  }
+
+  /* Botones de toggle según contexto */
+  .mobile-only {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}

@@ -1,0 +1,525 @@
+/* Estilos Valeria — todo bajo .valeria-content excepto lo 
+genuinamente compartido */
+
+.valeria-content .profile-header-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.valeria-content .profile-info {
+  width: 100%;
+}
+
+.valeria-content .profile-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--terminal-green);
+  object-fit: cover;
+}
+
+/* Películas */
+.valeria-content .media-section {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.valeria-content .contenedor-peliculas {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+}
+
+.valeria-content iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--terminal-green);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.valeria-content .contenedor-peliculas h4 {
+  color: var(--text-accent);
+  text-shadow: 0 0 5px var(--terminal-green);
+  margin: 0.5rem 0;
+}
+
+.valeria-content .contenedor {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.valeria-content .description-peliculas {
+  flex: 1;
+  min-width: 0;
+  color: var(--terminal-green);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.valeria-content .btn-leer {
+  background-color: transparent;
+  color: var(--terminal-green);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border: solid 1px var(--terminal-green);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  width: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 4px 10px;
+  height: auto;
+  align-self: flex-start;
+}
+
+.valeria-content .btn-leer:hover {
+  background: var(--terminal-green);
+  color: var(--bg-color);
+  font-weight: bold;
+}
+
+/* logos stack tecnologico*/
+.contenedor-seccion-valeria {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.habilidades-valeria {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.listas-valeria {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.valeria-content .proyectos-carrusel {
+  overflow: hidden;
+}
+
+@keyframes logo-hover {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  }
+
+  to {
+    opacity: 0.7;
+    transform: scale(1.2);
+    /* agranda 20% */
+    filter: drop-shadow(0px 0px 10px rgba(19, 248, 38, 0.7));
+    /* sombra de color / glow */
+    /* filter: drop-shadow(0px 8px 12px rgba(126, 125, 125, 0.3));   sombra */
+  }
+}
+
+.logo-tecnologias-valeria {
+  width: 75px;
+  height: 75px;
+}
+
+.logo-tecnologias-valeria:hover {
+  animation: logo-hover 0.3s ease forwards;
+}
+
+.valeria-content .discos {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+  box-sizing: border-box;
+}
+
+.valeria-content .carrusel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 50px;
+  margin: 1.5rem 0;
+}
+
+
+.valeria-content .discos-favoritos {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.valeria-content .disco-item {
+  min-width: 150px;
+  flex: 0 0 calc(100% - 15px);
+  text-align: center;
+  background: rgba(16, 16, 28, 0.4);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.valeria-content .disco-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 255, 65, 0.15);
+  border-color: rgba(0, 255, 65, 0.4);
+}
+
+.valeria-content .disco-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.valeria-content .disco-item:hover img {
+  transform: scale(1.05);
+}
+
+.valeria-content .disco-item figcaption {
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.valeria-content .disco-item figcaption span {
+  font-size: 0.9rem;
+  color: var(--text-accent);
+  font-weight: bold;
+  text-align: center;
+}
+
+.valeria-content .disco-item figcaption a {
+  color: var(--terminal-green);
+  text-decoration: none;
+  border: 1px solid var(--terminal-green);
+  padding: 0.2rem 0.8rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.valeria-content .disco-item figcaption a:hover {
+  background: var(--terminal-green);
+  color: var(--bg-color);
+}
+
+.valeria-content .carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--terminal-green);
+  color: var(--bg-color);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valeria-content .prev {
+  left: 5px;
+}
+
+.valeria-content .next {
+  right: 5px;
+}
+
+.valeria-content .carrusel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.valeria-content .carrusel-btn:not(:disabled):hover {
+  background: var(--text-accent);
+  color: var(--terminal-green);
+}
+
+.skills-bars-valeria {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/*responsive */
+
+@media (max-width: 600px) {
+
+  .valeria-content .discos {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+
+  .valeria-content .disco-item {
+    flex: 0 0 calc(100% - 15px);
+    /* 3 discos por fila */
+  }
+
+  .valeria-content .disco-item figcaption span {
+    font-size: 0.75rem;
+  }
+
+  .valeria-content .disco-item figcaption a {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.6rem;
+  }
+
+  .valeria-content .profile-header-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .valeria-content iframe {
+    height: 180px;
+    /* Reducir altura en móviles */
+  }
+
+  .valeria-content .profile-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .valeria-content .profile-info h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .valeria-content .profile-info p {
+    margin-bottom: 1.5rem;
+  }
+
+  .valeria-content .profile-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .valeria-content .habilidades-valeria {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .logo-tecnologias-valeria {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skills-bars-valeria {
+    width: 100%;
+  }
+
+  .valeria-content .contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .valeria-content .contenedor-peliculas {
+    padding: 10px;
+    /* Reducir padding en móviles */
+  }
+
+  .valeria-content .contenedor-peliculas h4 {
+    font-size: 0.85rem;
+  }
+
+  .valeria-content .description-peliculas {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+
+  .valeria-content .btn-leer {
+    align-self: center;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .valeria-content .carrusel-container {
+    padding: 0;
+  }
+
+  .valeria-content .carrusel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .valeria-content .discos {
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+    box-sizing: border-box;
+  }
+
+  .valeria-content .disco-item {
+    flex: 0 0 calc(33.33% - 15px);
+    /* 3 en vez de 2 */
+  }
+
+  .valeria-content .profile-header-flex {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .valeria-content .profile-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .valeria-content .habilidades-valeria {
+    justify-content: space-around;
+    gap: 0.8rem;
+  }
+
+  .logo-tecnologias-valeria {
+    width: 70px;
+    height: 70px;
+  }
+
+  .valeria-content .contenedor-peliculas {
+    padding: 12px;
+  }
+
+  .valeria-content .contenedor {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .valeria-content .description-peliculas {
+    font-size: 0.8rem;
+  }
+
+  .valeria-content .carrusel-container {
+    padding: 0 45px;
+  }
+
+  .valeria-content .carrusel-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .valeria-content .disco-item {
+    flex: 0 0 calc(25% - 15px);
+    /* 4 en vez de 3 */
+  }
+
+  .valeria-content .profile-header-flex {
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+
+  .valeria-content .profile-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .valeria-content .habilidades-valeria {
+    justify-content: space-between;
+  }
+
+  .logo-tecnologias-valeria {
+    width: 80px;
+    height: 80px;
+  }
+
+  .valeria-content .carrusel-container {
+    padding: 0 60px;
+  }
+
+  .valeria-content .contenedor {
+    gap: 1.5rem;
+  }
+
+  .valeria-content .description-peliculas {
+    font-size: 0.9rem;
+  }
+
+  .skills-bars-valeria {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .valeria-content .disco-item {
+    flex: 0 0 calc(33.33% - 15px);
+    /* 3 en vez de 6, más grandes */
+  }
+
+  .valeria-content .profile-header-flex {
+    gap: 3rem;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+  }
+
+  .valeria-content .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .valeria-content .habilidades-valeria {
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+
+  .logo-tecnologias-valeria {
+    width: 90px;
+    height: 90px;
+  }
+
+  .valeria-content .carrusel-container {
+    padding: 0 80px;
+  }
+
+  .valeria-content .contenedor {
+    gap: 2rem;
+  }
+
+  .valeria-content .description-peliculas {
+    font-size: 1rem;
+  }
+
+  .skills-bars-valeria {
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .valeria-content .contenedor-peliculas {
+    padding: 20px;
+  }
+}

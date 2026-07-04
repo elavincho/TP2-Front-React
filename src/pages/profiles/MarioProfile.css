@@ -1,0 +1,752 @@
+/* Estilos Mario */
+
+.contenedor-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contenedor-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 30px;
+  color: var(--text-accent);
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.contenedor-nav ul li a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.links-nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-between;
+}
+
+.links-nav a {
+  display: flex;
+  color: var(--text-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: solid 1px var(--terminal-red);
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.links-nav a:hover {
+  background: var(--text-accent);
+  color: black;
+  font-weight: bold;
+}
+
+.icono-linkedin {
+  width: 25px;
+  height: 25px;
+  margin-left: 2px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.contenedor-nav .links-nav a:hover .icono-linkedin {
+  transform: rotate(360deg) scale(1.1);
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  filter: brightness(0) invert(0);
+}
+
+.mario-content .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mario-content .social-links a {
+  display: flex;
+  color: var(--text-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: solid 1px var(--terminal-red);
+  border-radius: 5px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mario-content .social-links a:hover {
+  background: var(--text-accent);
+  color: black;
+  font-weight: bold;
+
+}
+
+.icono-github {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.mario-content .social-links a:hover .icono-github {
+  transform: rotate(360deg) scale(1.05);
+  filter: brightness(0) invert(0);
+}
+
+.mario-content .social-links a:hover .icono-linkedin {
+  transform: rotate(360deg) scale(1.05);
+  filter: brightness(0) invert(0);
+}
+
+
+.mario-content .titulo {
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.profile-image-mario {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--terminal-red);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image-mario img {
+  width: 190px;
+  height: 190px;
+  transform: translate(0, 0) scale(1);
+  animation: volar 3s ease-out forwards;
+}
+
+@keyframes volar {
+  0% {
+    transform: translate(200px, -200px) scale(2);
+  }
+
+  30% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.profile-info-mario h1 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.profile-info-mario h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.mario-content .role {
+  font-size: 1.3rem;
+  color: var(--text-accent);
+  font-weight: bolder;
+}
+
+.mario-content .dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.mario-content .description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: var(--text-accent);
+  font-weight: bold;
+  text-align: justify;
+}
+
+.disco-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.disco {
+  width: 320px;
+  height: 320px;
+  cursor: pointer;
+  border-radius: 0%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  filter: drop-shadow(2px 4px 8px rgba(185, 185, 185, 0.3));
+}
+
+.disco:hover {
+  border-radius: 50%;
+  animation: girarDisco 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+.mario-content figcaption {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-accent);
+}
+
+.mario-content figcaption a {
+  color: var(--text-accent);
+  text-decoration: none;
+  margin-left: 0.4rem;
+  border: 1px solid var(--terminal-red);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  vertical-align: top;
+}
+
+.mario-content figcaption a:hover {
+  background: var(--text-accent);
+  color: var(--bg-color);
+}
+
+@keyframes girarDisco {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mario-content .tarjeta {
+  margin: 20px;
+}
+
+.mario-content .tarjeta p {
+  text-indent: 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.contenedor-seccion {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.listas {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.logo-tecnologias {
+  width: 75px;
+  height: 75px;
+}
+
+.logo-tecnologias:hover {
+  
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 2px var(--text-accent));
+  animation: girarDisco 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.mario-content .contenedor-peliculas {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-radius: 10px;
+  border: solid 1px whitesmoke;
+  margin: 20px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mario-content .contenedor-peliculas:hover {
+  background-color: rgb(19, 19, 19);
+  border-radius: 10px;
+}
+
+.mario-content .description-peliculas {
+  color: var(--text-accent);
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.mario-content iframe {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  height: 220px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.mario-content .btn-leer {
+  background-color: transparent;
+  height: 40px;
+  width: 100%;
+  color: var(--text-accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border: solid 1px var(--terminal-red);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 10px;
+}
+
+.mario-content .btn-leer:hover {
+  background: var(--text-accent);
+  color: var(--terminal-red);
+  font-weight: bold;
+}
+
+.mario-content .contenedor {
+  max-width: 600px;
+}
+
+.mario-content .discos-favoritos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  width: 100%;
+}
+
+.mario-content .discos-favoritos img {
+  width: 200px;
+  height: 200px;
+}
+
+.mario-content .parrafo-resumido {
+  max-height: 60px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mario-content .parrafo-completo {
+  max-height: 1000px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+  .tarjeta h3 {
+    color: var(--text-accent);
+  }
+
+
+.skills-bars-mario {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .contenedor-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .mario-content .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-links a {
+    display: flex;
+    color: var(--text-accent);
+    text-decoration: none;
+    font-size: 0.8rem;
+    border: solid 1px var(--terminal-red);
+    border-radius: 5px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mario-content .titulo {
+    font-size: 1.2rem;
+  }
+
+  .mario-content .role {
+    font-size: 1rem;
+  }
+
+  .mario-content .dos-columnas {
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: space-evenly;
+  }
+
+  .profile-image-mario {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-info-mario {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 0.7rem;
+  }
+
+  .contenedor-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-left: 0;
+  }
+
+  .listas {
+    list-style: none;
+  }
+
+  .logo-tecnologias {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mario-content .contenedor-peliculas {
+    grid-template-columns: 1fr;
+  }
+
+  .mario-content .contenedor-peliculas iframe {
+    order: -1;
+  }
+
+  .tarjeta h3 {
+    color: var(--text-accent);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1rem;
+  }
+}
+
+
+/* Estilos del Carrusel de Proyectos */
+.proyectos-carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 20px;
+}
+
+.carrusel-contenedor {
+  flex: 1;
+  overflow: hidden;
+  max-width: 900px;
+  position: relative;
+
+}
+
+.proyecto-card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 1px solid var(--text-accent);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease;
+  min-height: 450px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.proyecto-imagen {
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.proyecto-imagen img {
+
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-imagen img:hover {
+  z-index: 100;
+  transform: scale(1.3);
+}
+
+.proyecto-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.proyecto-info h3 {
+  color: var(--text-accent);
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+.proyecto-descripcion {
+  color: var(--text-accent);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+}
+
+.proyecto-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.tech-badge {
+  color: var(--text-accent);
+  border: 1px solid var(--terminal-red);
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: var(--text-accent);
+  color: black;
+  transform: translateY(-2px);
+}
+
+.proyecto-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.proyecto-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-accent);
+  text-decoration: none;
+  border: 1px solid var(--terminal-red);
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.proyecto-link:hover {
+  background: var(--text-accent);
+  color: black;
+  transform: translateY(-2px);
+}
+
+.proyecto-link .icono-github {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  filter: brightness(0) invert(1);
+}
+
+.proyecto-link:hover .icono-github {
+  filter: brightness(0) invert(0);
+
+}
+
+/* Botones superpuestos */
+.carrusel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--terminal-red);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-accent);
+  transition: all 0.3s ease;
+  font-family: monospace;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.carrusel-btn:hover {
+  background: var(--text-accent);
+  color: black;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+  left: -15px;
+}
+
+.next-btn {
+  right: -15px;
+}
+
+.carrusel-indicadores {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 30px 0;
+}
+
+.indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--terminal-red);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicador:hover {
+  transform: scale(1.2);
+  background: rgba(0, 255, 0, 0.6);
+}
+
+.indicador.activo {
+  background: var(--text-accent);
+  width: 25px;
+  border-radius: 5px;
+}
+
+/* Responsive para botones superpuestos */
+@media (max-width: 768px) {
+  .proyecto-card {
+    grid-template-columns: 1fr;
+  }
+
+  .proyecto-imagen {
+    min-height: 200px;
+  }
+
+  .proyecto-info {
+    padding: 15px;
+  }
+
+  .proyecto-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .carrusel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .prev-btn {
+    left: -10px;
+  }
+
+  .next-btn {
+    right: -10px;
+  }
+
+  .proyecto-links {
+    flex-direction: column;
+  }
+
+  .proyecto-link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-carrusel {
+    margin: 20px 10px;
+  }
+
+  .carrusel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .prev-btn {
+    left: -8px;
+  }
+
+  .next-btn {
+    right: -8px;
+  }
+
+  .proyecto-descripcion {
+    font-size: 0.8rem;
+  }
+
+  .tech-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
